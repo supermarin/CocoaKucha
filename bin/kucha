@@ -20,9 +20,8 @@ end
 
 def change_slide
   @slide += 1
-  puts "Changing slide #{@slide} to slide #{@slide + 1}"
-  cmd = %Q(osascript -e 'tell application "System Events" to key code 124 using control down')
-  system(cmd)
+  print "\nChanging slide #{@slide} to slide #{@slide + 1}\t"
+  system(%Q(osascript -e 'tell application "System Events" to key code 124 using control down'))
 end
 
 def countdown
