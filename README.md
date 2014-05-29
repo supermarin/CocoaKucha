@@ -1,29 +1,16 @@
 # CocoaKucha
 
-TODO: Write a gem description
+Changes slides every 20 seconds for your Cocoa Kucha talk.
+
+Uses Applescript and sends the right arrow key - compatible with
+[Deckset](http://decksetapp.com), Keynote, or any presentation app
+you can imagine.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'CocoaKucha'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install CocoaKucha
+    $ gem install kucha
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ kucha
 
-## Contributing
-
-1. Fork it ( http://github.com/<my-github-username>/CocoaKucha/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
