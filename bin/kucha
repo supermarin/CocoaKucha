@@ -2,10 +2,19 @@
 # Automatic slide switcher for CocoaCucha
 #
 #
-def every_20_seconds
-  loop do
-    sleep 0.20
-    yield
+
+def every(interval); interval end
+def public(object);  self end
+def static(object);  self end
+def void(object);    self end
+def main();          yield end
+
+class Numeric
+  def seconds
+    loop do
+      sleep self
+      yield
+    end
   end
 end
 
@@ -26,11 +35,9 @@ def countdown
 end
 
 # Sorry, I had to
-def public_static_void_main(*args)
+public static void main() {
   @slide = 0
   countdown
-  every_20_seconds { change_slide }
-end
-
-public_static_void_main
+  every 20.seconds { change_slide }
+}
 
