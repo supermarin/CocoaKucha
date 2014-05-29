@@ -4,31 +4,33 @@
 #
 def every_20_seconds
   loop do
-    sleep 20
+    sleep 0.20
     yield
   end
 end
 
 def change_slide
-  puts "Changing slide.. #{@slide}"
   @slide += 1
+  puts "Changing slide #{@slide} to slide #{@slide + 1}"
   cmd = %Q(osascript -e 'tell application "System Events" to key code 124 using control down')
   system(cmd)
 end
 
 def countdown
-  puts "starting in 3..."
-  sleep 1
-  print "2..."
-  sleep 1
-  print "1..."
-  sleep 1
+  print "Starting in "
+  5.downto 1 do |numbah|
+    print "#{numbah}..."
+    sleep 1
+  end
   puts "GO!"
 end
 
-@slide = 0
-countdown
-every_20_seconds do
-  change_slide
+# Sorry, I had to
+def public_static_void_main(*args)
+  @slide = 0
+  countdown
+  every_20_seconds { change_slide }
 end
+
+public_static_void_main
 
