@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'CocoaKucha/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "CocoaKucha"
+  spec.name          = "kucha"
   spec.version       = CocoaKucha::VERSION
   spec.authors       = ["Marin Usalj"]
   spec.email         = ["mneorr@gmail.com"]
